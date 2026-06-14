@@ -1,2 +1,6 @@
 .venv
 *.docx
+.env
+Extracted/
+test.py
+tags
