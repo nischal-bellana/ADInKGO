@@ -56,6 +56,8 @@ for metadata in metadatas:
     a['item_1_text'] = extractor.get_section(metadata['url'], "1", "text")
     data.append(a)
 
-with open("Extracted/filings_data.json", "w") as file:
-    json.dump(data, file)
+for a in data:
+    with open(f'Extracted/{a["name"]}_filing.txt', 'w') as file:
+        file.write(a['item_1a_text'])
+        file.write(a['item_1_text'])
 
